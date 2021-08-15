@@ -137,3 +137,33 @@ function rebuildLettersNotFound() {
     }
     document.getElementById('letters').innerHTML = lnfdiv;
 }
+
+function init() {
+    // Get the input field
+    var input = document.getElementById("word");
+
+    // Execute a function when the user releases a key on the keyboard
+    input.addEventListener("keyup", function (event) {
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 13) {
+            // Cancel the default action, if needed
+            event.preventDefault();
+            // Trigger the button element with a click
+            document.getElementById("startbtn").click();
+        }
+    });
+    // Get the input field
+    var input = document.getElementById("letter");
+
+    // Execute a function when the user releases a key on the keyboard
+    input.addEventListener("keyup", function (event) {
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 13) {
+            // Cancel the default action, if needed
+            event.preventDefault();
+            // Trigger the button element with a click
+            document.getElementById("guessbtn").click();
+        }
+    });
+    document.getElementById('word').select();
+}
